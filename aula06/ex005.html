@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+
+    <style>
+        body {
+            background-color: rgb(187, 127, 255);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>DOM - Document Object Model é um conjunto de objetos dentro do navegador que dará acesso aos componentes internos do website.</p>
+    <p>Árvore DOM começa da raiz e é chamada de window. Elementos são quaisquer estruturas que aparecem dentro da árvore DOM e é possível selecionar esses elementos para poder navegar dentro da árvore DOM</p>
+    <p>Existem vários métodos para selecionar: por marca, por ID, por nome, por classe, por seletor.</p>
+
+    <div id="msg">Clique aqui</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]; // o número zero dentro do colchete é usado para elementos que estão no plural, preciso indicar qual elemento que quero acessar.
+        window.document.write(p1.innerText); //innerText comando que mostra o que está escrito dentro do p1, por ex.
+        
+        /*var d = window.document.getElementById('msg');
+        d.style.background = 'green';*/
+        
+        /*var d = window.document.getElementsByName('msg')[0];
+        d.innerText = 'Olá';
+        d.style.background = 'red';*/
+
+        var d = window.document.querySelector('div#msg'); //toda div é representada por uma # e toda classe por um .
+        d.style.background = 'blue';
+
+    </script>
+    
+</body>
+</html>
