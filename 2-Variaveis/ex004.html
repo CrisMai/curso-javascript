@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando Strings</title>
+    <style>
+        body {
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var nome = window.prompt('Qual é o seu nome?');
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras.<br/>`);
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}.<br/>`);
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.<br/>`);
+    </script>
+
+    <h2>Operadores</h2>
+    <p>O JS possui várias famílias de operadores, os principais são: aritméticos, atribuição, relacionais, lógicos, ternários.</p>
+    <p>aritméticos: + - * / % **</p> <!--% => resto da divisão de inteiros, ** => potência-->
+    <p>atribuição: temos os operadores de atribuição simples, auto-atribuição (+=, -=, /=...), incremento (x++, x--...</p>
+    <p>relacionais: >, <, >=, <=, ==, != e ainda os relacionais de identidade. O resultado da expressão com operadores relacionais será sempre valor booleano (true ou false).</p> <!-- == => igual, != => diferente-->
+    <p>lógicos: ! negação, && conjunção, || disjunção.</p>
+    <p>terniário: ? : => possui três partes: teste ? true : false</p>
+</body>
+</html>
