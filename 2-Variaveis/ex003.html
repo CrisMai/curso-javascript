@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Tipos</title>
+    <style>
+        body {
+        background-color: rgb(125, 209, 125);
+        font: normal 20pt arial;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversão de Tipos</h1>
+    <p>Em alguns casos é necessário fazer a conversão de tipos, que pode ser de uma string para um número.</p>
+    <p>Number.parseInt(n) ==> faz a conversão de um número para um número inteiro.</p>
+    <p>Number.parseFloat(n) ==> conversão de um número para um número real.</p>
+    <p>Nas versões mais atuais pode ser usado somente Number(n) onde o JavaScript vai fazer a conversão de acordo com os dados. </p>
+    <P>Conversão de um número para string: string(n) ou n.tostring().</P>
+    <p>Para formatação de strings usa `TEMPLATE STRING´ que é o símbolo ==> ${...}.</p>
+    <script>
+        
+       var n1 =  Number(window.prompt('Digite um número:'));
+       var n2 =  Number(window.prompt('Digite outro número:'));
+       var s = n1 + n2;
+       window.alert(`A soma dos valores entre ${n1} e ${n2} é igual a ${s}`);
+
+    </script>
+    
+</body>
+</html>
