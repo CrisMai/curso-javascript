@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Estrutura While</title>
+</head>
+<body>
+    <h1>Estrutura While</h1>
+
+    <script>
+        var numero, contador = 0
+        numero = prompt("Digite um número qualquer entre 10 e 100")
+        if((numero < 10) || (numero > 100)) 
+        {
+            alert("Valor fora do intervalo especificado!")
+        }
+        else {
+            while(contador <= numero)
+            {
+                document.write(contador + "<br/>")
+                contador ++
+            }
+        }
+    </script>
+    
+</body>
+</html>
