@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento addEventListener</title>
+    <!--<link rel="stylesheet" href="estilo.css">-->
+    <style>
+        #dv1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;  
+            background-color: #fff;   
+            left: 0px;
+            top: 0px;
+            position: absolute;
+        }   
+    </style>
+
+    <script>
+        var px = 0; //posicionamento horizontal
+        var py = 0; //posicionamento vertical
+
+        function move() {
+            //var obj = document.getElementById("dv1");
+            var tecla = event.keyCode;
+            if(tecla == 37) {
+                px -= 10;
+                obj.style.left = px + "px";
+            }
+            else if(tecla == 38) {
+                py -= 10;
+                obj.style.top = py + "px";
+            }
+            else if(tecla == 39) {
+                px += 10;
+                obj.style.left = px + "px";
+            }
+            else if(tecla == 40) {
+                py += 10;
+                obj.style.top = py + "px";
+            } 
+            else if(tecla == 13) {
+               alert("Evento keydown removido!");
+               document.removeEventListener("keydown", move);
+               obj.style.backgroundColor = "#fff";
+            }  
+        }
+
+        function addClique() {
+            document.addEventListener("keydown", move);
+            obj.style.backgroundColor = "#08f";
+        }
+
+        function iniciar() {
+            obj = document.getElementById("dv1");
+            obj.addEventListener("click", addClique);
+
+        }
+
+        window.addEventListener("load", iniciar);
+        
+       
+    </script>
+</head>
+
+<body>
+    
+    <div id="dv1">
+    <br/>
+    </div>
+
+</body>
+   <!--<script src=></script>-->
+   <!--37 = código da seta para a esquerda; 38 = para cima; 39 = direita; 40 = baixo; 13 = tecla enter.-->
+        
+  
+</html>
+
