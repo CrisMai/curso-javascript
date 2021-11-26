@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento addEventListener</title>
+    <!--<link rel="stylesheet" href="estilo.css">-->
+    <style>
+        #dv1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;  
+            background-color: #08F;   
+        }   
+    </style>
+
+    <script>
+        function msg() {
+            alert("Olá!");
+        }
+
+        function cor(obj, cor) {
+            obj.style.backgroundColor=cor;
+        }
+
+        //Inicialização de eventos
+        function addEventos() {
+            var obj=document.getElementById("dv1");
+            obj.addEventListener("click", msg);
+            obj.addEventListener("mouseover", function(event){
+                cor(obj, "#FFF");
+            })
+            obj.addEventListener("mouseout", function(event){
+                cor(obj, "#08F");
+            })
+        }
+        window.addEventListener("load", addEventos);
+    </script>
+</head>
+
+<body>
+    <h1>Evento addEventListener</h1>
+    <p>Outra maneira de adicionar eventos aos elementos html é usando o comando addEventListener, uma das vantagens 
+        de se usar este método é que não dependemos do HTML, assim podemos deixar todo código javascript em um arquivo separado.</p>
+     
+    <div id="dv1">
+    <br/>
+    </div>
+    
+    <footer>
+        <p>Desenvolvido por Cristiane Mai</p>
+    </footer>
+
+</body>
+   <!--<script src=></script>-->
+  
+</html>
