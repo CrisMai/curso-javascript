@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <!--<link rel="stylesheet" href="estilo.css">-->
+    <style>
+        #dv1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;   
+        }
+        button {
+            background-color: aqua;    
+        }
+    </style>
+
+    <script>
+        function mudaCor(obj,cor) {
+            obj.style.backgroundColor = cor;    
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Eventos</h1>
+    <p>Eventos são acontecimentos específicos onde toda ação do usuário em uma página gera um evento, por 
+        exemplo, quando movemos o mouse, quando clicamos com o botão do mouse, quando a página é carregada, 
+        quando selecionamos um ítem, etc.</p>
+    <p>Alguns exemplos de eventos: onclick, onmousemove, onmouseover, onkeydown, oncopy, etc.</p>
+
+    <div id="dv1" onmouseover="mudaCor(this, '#f00')" onmouseout="mudaCor(this, '#fff')" onmouseover="mudaCor(document.getElementById('dv1'),'#08B')">
+        <br/>
+    </div>
+    <div>
+        <button onclick="alert('Olá!')" onmouseover="mudaCor(document.getElementById('dv1'),'#08F')">Clique aqui</button>
+    </div>
+    
+    <footer>
+        <p>Desenvolvido por Cristiane Mai</p>
+    </footer>
+
+</body>
+</html>
